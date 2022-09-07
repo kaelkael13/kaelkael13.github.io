@@ -1,35 +1,59 @@
+$mainColor: rgb(184, 141, 49);
+
 * {
     margin: 0;
     padding: 0;
 }
 
 .top {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    background-image: url(images/headBcgr.jpg);
+    position: relative;
 }
 
-.video {
-    height: 100vh;
-    position: absolute;
-    width: 100%;
+.head {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 95px;
 }
 
-h1 {
-    margin: 0;
+.head p {
+    font-family: 'Lato';
+    font-size: 20px;
+    text-align: center;
+    color: $mainColor;
+}
+
+.header {
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    position: relative;
-    color: white;
-    left: 33%;
+    margin: 0;
+    position: absolute;
     top: 50%;
-    width: 500px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.header div p {
+    color: black;
+    border: 4px solid;
+    padding: 15px 20px;
+    font-family: 'Lato';
+    letter-spacing: 3px;
+    font-size: 36px;
+    text-align: center;
 }
 
 span {
-    color: pink;
-}
-
-.content {
-    background-image: url(contentBcgr.jpg);
+    color: $mainColor;
 }
