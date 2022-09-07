@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
 .top {
   min-height: 100vh;
   width: 100%;
@@ -14,9 +19,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   padding-top: 95px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .head p {
@@ -71,7 +77,106 @@
   text-align: center;
 }
 
-span {
+.header span {
   color: #b88d31;
+}
+
+.content {
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+.aboutMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.aboutMeList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+}
+
+.aboutMeList div {
+  border: 1px solid;
+  padding: 10px;
+  max-width: 300px;
+}
+
+.aboutMeList h3 {
+  padding-bottom: 25px;
+}
+
+.aboutMeList p {
+  padding-top: 25px;
+}
+
+.aboutMe h2 {
+  font-size: 30px;
+}
+
+.aboutMeHardSkills {
+  margin-top: 100px;
+}
+
+.aboutMeHardSkillsList {
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutMeHardSkillsList img {
+  width: 100px;
+  height: 150px;
+}
+
+.aboutMeHardSkillsList h3 {
+  padding-bottom: 25px;
+}
+
+.aboutMeProjects {
+  margin-top: 100px;
+}
+
+.aboutMeProjectsList {
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=style.css.map */

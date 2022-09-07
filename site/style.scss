@@ -5,6 +5,11 @@ $mainColor: rgb(184, 141, 49);
     padding: 0;
 }
 
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
 .top {
     min-height: 100vh;
     width: 100%;
@@ -14,8 +19,8 @@ $mainColor: rgb(184, 141, 49);
 
 .head {
     display: flex;
-    justify-content: space-around;
     padding-top: 95px;
+    justify-content: center;
 }
 
 .head p {
@@ -30,6 +35,7 @@ $mainColor: rgb(184, 141, 49);
     align-items: center;
     justify-content: center;
 }
+
 
 .header div {
     display: flex;
@@ -54,6 +60,76 @@ $mainColor: rgb(184, 141, 49);
     text-align: center;
 }
 
-span {
+.header span {
     color: $mainColor;
+}
+
+.content {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    &List {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 50px;
+
+        & div {
+            border: 1px solid;
+            padding: 10px;
+            max-width: 300px;
+        }
+    }
+
+    &List h3 {
+        padding-bottom: 25px;
+    }
+
+    &List p {
+        padding-top: 25px;
+    }
+
+}
+
+.aboutMe h2 {
+    font-size: 30px;
+}
+
+.aboutMeHardSkills {
+    margin-top: 100px;
+
+    &List {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &List img {
+        width: 100px;
+        height: 150px;
+    }
+
+    &List h3 {
+        padding-bottom: 25px;
+    }
+}
+
+.aboutMeProjects {
+    margin-top: 100px;
+
+    &List {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
