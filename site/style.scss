@@ -1,4 +1,4 @@
-$mainColor: rgb(184, 141, 49);
+$mainColor: rgb(255, 179, 0);
 
 * {
     margin: 0;
@@ -21,6 +21,22 @@ $mainColor: rgb(184, 141, 49);
     display: flex;
     padding-top: 95px;
     justify-content: center;
+
+    &ArrowDown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        text-align: center;
+        line-height: 2;
+    }
 }
 
 .head p {
@@ -60,13 +76,9 @@ $mainColor: rgb(184, 141, 49);
     text-align: center;
 }
 
-.header span {
-    color: $mainColor;
-}
-
 .content {
-    margin-top: 100px;
-    margin-bottom: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .aboutMe {
@@ -80,6 +92,11 @@ $mainColor: rgb(184, 141, 49);
         flex-direction: row;
         justify-content: space-between;
         padding-top: 50px;
+
+        &Item:nth-child(2) {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
 
         & div {
             border: 1px solid;
@@ -103,7 +120,10 @@ $mainColor: rgb(184, 141, 49);
 }
 
 .aboutMeHardSkills {
-    margin-top: 100px;
+    background-image: url(images/headBcgr.jpg);
+    margin-top: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 
     &List {
         padding-top: 50px;
@@ -124,7 +144,7 @@ $mainColor: rgb(184, 141, 49);
 }
 
 .aboutMeProjects {
-    margin-top: 100px;
+    margin-top: 50px;
 
     &List {
         padding-top: 50px;
@@ -132,4 +152,118 @@ $mainColor: rgb(184, 141, 49);
         flex-direction: row;
         justify-content: space-between;
     }
+
+    &List img {
+        padding: 10px;
+    }
+}
+
+.contacts {
+    background-image: url(images/headBcgr.jpg);
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &List {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &ListLeft {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    &ListLeft div {
+        width: 250px;
+    }
+
+    &ListLeft img {
+        width: 100px;
+    }
+
+    &ListRight {
+        display: flex;
+        text-align: center;
+    }
+}
+
+.contactsListLeftItem h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contactsListLeftItem a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px
+}
+
+.contactsHead {
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    padding-bottom: 50px;
+
+    &Text {
+        padding-bottom: 50px;
+        text-align: center;
+    }
+}
+
+form {
+    border: 1px solid;
+    border-radius: 20px;
+    width: 300px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    padding: 30px;
+    background: white;
+    box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, .5);
+    border: none;
+}
+
+form h2 {
+    padding-bottom: 20px;
+}
+
+form input {
+    max-width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #E9EFF6;
+    padding-left: 20px;
+    border: none;
+}
+
+form input:nth-child(5) {
+    //Textarea
+    padding: 0;
+    cursor: pointer;
+    background: $mainColor;
+}
+
+form textarea {
+    border-radius: 20px;
+    background: #E9EFF6;
+    resize: none;
+    padding-top: 5px;
+    padding-left: 20px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+footer {
+    background: black;
+    color: white;
+    height: 100px;
+}
+
+footer p {
+    padding-top: 40px;
 }
