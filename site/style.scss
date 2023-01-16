@@ -1,269 +1,380 @@
 $mainColor: rgb(255, 179, 0);
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 1140px;
+  margin: 0 auto;
+  max-width: 1140px;
 }
 
 .top {
-    min-height: 100vh;
-    width: 100%;
-    background-image: url(images/headBcgr.jpg);
-    position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(images/headBcgr.jpg);
+  position: relative;
 }
 
 .head {
-    display: flex;
-    padding-top: 95px;
-    justify-content: center;
+  display: flex;
+  padding-top: 95px;
+  justify-content: center;
 
-    &ArrowDown {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 0;
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-        cursor: pointer;
-        text-align: center;
-        line-height: 2;
-    }
-}
-
-.head p {
-    font-family: 'Lato';
-    font-size: 20px;
-    text-align: center;
-    color: $mainColor;
-}
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.header div {
+  &ArrowDown {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 0;
     position: absolute;
-    top: 50%;
+    bottom: 10%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    text-align: center;
+    line-height: 2;
+  }
+}
+
+.head p {
+  font-family: 'Lato';
+  font-size: 20px;
+  text-align: center;
+  color: $mainColor;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 
 .header div p {
-    color: black;
-    border: 4px solid;
-    padding: 15px 20px;
-    font-family: 'Lato';
-    letter-spacing: 3px;
-    font-size: 36px;
-    text-align: center;
+  color: black;
+  border: 4px solid;
+  padding: 15px 20px;
+  font-family: 'Lato';
+  letter-spacing: 3px;
+  font-size: 36px;
+  text-align: center;
 }
 
 .content {
-    margin-top: 50px;
-    margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .aboutMe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 
-    &List {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-top: 50px;
+  &List {
+    padding-top: 50px;
 
-        &Item:nth-child(2) {
-            margin-left: 30px;
-            margin-right: 30px;
-        }
-
-        & div {
-            border: 1px solid;
-            padding: 10px;
-            max-width: 300px;
-        }
+    &Item {
+      border: 1px solid;
+      padding: 10px;
+      max-width: 300px;
     }
 
-    &List h3 {
-        padding-bottom: 25px;
+    &Item:nth-child(2) {
+      margin-left: 30px;
+      margin-right: 30px;
     }
+  }
 
-    &List p {
-        padding-top: 25px;
-    }
+  &List h3 {
+    padding-bottom: 25px;
+  }
+
+  &List p {
+    padding-top: 25px;
+  }
 
 }
 
+// Флип карточки
+// **
+.flipper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+
+  -o-transition: 0.6s;
+  -o-transform-style: preserve-3d;
+
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+.flipperContainer {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 500px;
+}
+
+.aboutMeListItem:hover .flipper,
+.flipperContainer:hover .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flipFront,
+.flipBack,
+.flipper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flipFront {
+  z-index: 2;
+}
+
+.flipBack {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+
+
+// **
 .aboutMe h2 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .aboutMeHardSkills {
-    background-image: url(images/headBcgr.jpg);
-    margin-top: 50px;
-    padding-bottom: 50px;
+  background-image: url(images/headBcgr.jpg);
+  margin-top: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+  &List {
     padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    &List {
-        padding-top: 50px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+  &List img {
+    width: 100px;
+    height: 150px;
+  }
 
-    &List img {
-        width: 100px;
-        height: 150px;
-    }
-
-    &List h3 {
-        padding-bottom: 25px;
-    }
+  &List h3 {
+    padding-bottom: 25px;
+  }
 }
 
 .aboutMeProjects {
-    margin-top: 50px;
+  margin-top: 50px;
 
-    &List {
-        padding-top: 50px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  &List {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    &List img {
-        padding: 10px;
-    }
+  &List img {
+    padding: 10px;
+  }
 }
 
 .contacts {
-    background-image: url(images/headBcgr.jpg);
-    padding-top: 50px;
-    padding-bottom: 50px;
+  background-image: url(images/headBcgr.jpg);
+  padding-top: 50px;
+  padding-bottom: 50px;
 
-    &List {
-        display: flex;
-        justify-content: space-around;
-    }
+  &List {
+    display: flex;
+    justify-content: space-around;
+  }
 
-    &ListLeft {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        text-align: center;
-        gap: 30px;
-    }
+  &ListLeft {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
 
-    &ListLeft div {
-        width: 250px;
-    }
+  &ListLeft div {
+    width: 250px;
+  }
 
-    &ListLeft img {
-        width: 100px;
-    }
+  &ListLeft img {
+    width: 100px;
+  }
 
-    &ListRight {
-        display: flex;
-        text-align: center;
-    }
+  &ListRight {
+    display: flex;
+    text-align: center;
+  }
 }
 
 .contactsListLeftItem h3 {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .contactsListLeftItem a {
-    text-decoration: none;
-    color: black;
-    font-size: 17px
+  text-decoration: none;
+  color: black;
+  font-size: 17px
 }
 
 .contactsHead {
-    font-size: 30px;
-    display: block;
-    text-align: center;
-    padding-bottom: 50px;
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  padding-bottom: 50px;
 
-    &Text {
-        padding-bottom: 50px;
-        text-align: center;
-    }
+  &Text {
+    padding-bottom: 50px;
+    text-align: center;
+  }
 }
 
 form {
-    border: 1px solid;
-    border-radius: 20px;
-    width: 300px;
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-    // align-items: center;
-    padding: 30px;
-    background: white;
-    box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, .5);
-    border: none;
+  border: 1px solid;
+  border-radius: 20px;
+  width: 300px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  padding: 30px;
+  background: white;
+  box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, .5);
+  border: none;
 }
 
 form h2 {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 form input {
-    max-width: 100%;
-    height: 40px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    background: #E9EFF6;
-    padding-left: 20px;
-    border: none;
+  max-width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background: #E9EFF6;
+  padding-left: 20px;
+  border: none;
 }
 
 form input:nth-child(5) {
-    //Textarea
-    padding: 0;
-    cursor: pointer;
-    background: $mainColor;
+  //Textarea
+  padding: 0;
+  cursor: pointer;
+  background: $mainColor;
 }
 
 form textarea {
-    border-radius: 20px;
-    background: #E9EFF6;
-    resize: none;
-    padding-top: 5px;
-    padding-left: 20px;
-    border: none;
-    margin-bottom: 15px;
+  border-radius: 20px;
+  background: #E9EFF6;
+  resize: none;
+  padding-top: 5px;
+  padding-left: 20px;
+  border: none;
+  margin-bottom: 15px;
 }
 
 footer {
-    background: black;
-    color: white;
-    height: 100px;
+  background: black;
+  color: white;
+  height: 100px;
 }
 
 footer p {
-    padding-top: 40px;
+  padding-top: 40px;
+}
+
+// Для телефонов
+@media (max-width: 896px) {
+  .head p {
+    font-size: 15px;
+  }
+
+  .header div p {
+    font-size: 23px;
+  }
+
+  .headArrowDown h2 {
+    font-size: 16px;
+  }
+
+  .flipper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutMeListItem:nth-child(2) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .aboutMeHardSkillsList {
+    flex-direction: column;
+  }
+
+  .aboutMeProjectsList {
+    flex-direction: column;
+  }
+
+  .contactsList {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactsListLeft {
+    gap: 30px;
+    padding-bottom: 66px;
+  }
+
+  .contactsListLeft div {
+    width: 180px;
+    height: 140px;
+  }
+
+  form {
+    margin: 0 auto;
+  }
 }

@@ -16,88 +16,57 @@
 }
 
 .head {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-top: 95px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .headArrowDown {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 0;
   position: absolute;
   bottom: 10%;
   left: 50%;
   margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   cursor: pointer;
   text-align: center;
   line-height: 2;
 }
 
 .head p {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-size: 20px;
   text-align: center;
-  color: #ffb300;
+  color: rgb(255, 179, 0);
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .header div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .header div p {
   color: black;
   border: 4px solid;
   padding: 15px 20px;
-  font-family: 'Lato';
+  font-family: "Lato";
   letter-spacing: 3px;
   font-size: 36px;
   text-align: center;
@@ -109,50 +78,68 @@
 }
 
 .aboutMe {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
-
 .aboutMeList {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding-top: 50px;
 }
-
-.aboutMeListItem:nth-child(2) {
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-.aboutMeList div {
+.aboutMeListItem {
   border: 1px solid;
   padding: 10px;
   max-width: 300px;
 }
-
+.aboutMeListItem:nth-child(2) {
+  margin-left: 30px;
+  margin-right: 30px;
+}
 .aboutMeList h3 {
   padding-bottom: 25px;
 }
-
 .aboutMeList p {
   padding-top: 25px;
+}
+
+.flipper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 0.6s;
+  -o-transform-style: preserve-3d;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flipperContainer {
+  -o-perspective: 1000px;
+  perspective: 500px;
+}
+
+.aboutMeListItem:hover .flipper,
+.flipperContainer:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipFront,
+.flipBack,
+.flipper {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flipFront {
+  z-index: 2;
+}
+
+.flipBack {
+  transform: rotateY(180deg);
 }
 
 .aboutMe h2 {
@@ -165,29 +152,17 @@
   padding-bottom: 50px;
   padding-top: 50px;
 }
-
 .aboutMeHardSkillsList {
   padding-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .aboutMeHardSkillsList img {
   width: 100px;
   height: 150px;
 }
-
 .aboutMeHardSkillsList h3 {
   padding-bottom: 25px;
 }
@@ -195,21 +170,12 @@
 .aboutMeProjects {
   margin-top: 50px;
 }
-
 .aboutMeProjectsList {
   padding-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
 .aboutMeProjectsList img {
   padding: 10px;
 }
@@ -219,38 +185,24 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
 .contactsList {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
 .contactsListLeft {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   text-align: center;
   gap: 30px;
 }
-
 .contactsListLeft div {
   width: 250px;
 }
-
 .contactsListLeft img {
   width: 100px;
 }
-
 .contactsListRight {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
 }
@@ -272,7 +224,6 @@
   text-align: center;
   padding-bottom: 50px;
 }
-
 .contactsHeadText {
   padding-bottom: 50px;
   text-align: center;
@@ -283,17 +234,11 @@ form {
   border-radius: 20px;
   width: 300px;
   max-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 30px;
   background: white;
-  -webkit-box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, 0.5);
   border: none;
 }
 
@@ -314,7 +259,7 @@ form input {
 form input:nth-child(5) {
   padding: 0;
   cursor: pointer;
-  background: #ffb300;
+  background: rgb(255, 179, 0);
 }
 
 form textarea {
@@ -336,4 +281,46 @@ footer {
 footer p {
   padding-top: 40px;
 }
-/*# sourceMappingURL=style.css.map */
+
+@media (max-width: 896px) {
+  .head p {
+    font-size: 15px;
+  }
+  .header div p {
+    font-size: 23px;
+  }
+  .headArrowDown h2 {
+    font-size: 16px;
+  }
+  .flipper {
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutMeListItem:nth-child(2) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .aboutMeHardSkillsList {
+    flex-direction: column;
+  }
+  .aboutMeProjectsList {
+    flex-direction: column;
+  }
+  .contactsList {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactsListLeft {
+    gap: 30px;
+    padding-bottom: 66px;
+  }
+  .contactsListLeft div {
+    width: 180px;
+    height: 140px;
+  }
+  form {
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=style.css.map */
