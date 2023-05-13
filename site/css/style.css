@@ -1,0 +1,519 @@
+body {
+  background: radial-gradient(#0a192f, #1b4640);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #ccd6f6;
+}
+
+h3 {
+  color: #ccd6f6;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.head {
+  display: flex;
+  padding-top: 95px;
+  justify-content: center;
+}
+.headArrowDown {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  line-height: 2;
+  padding-bottom: 80px;
+}
+.headArrowDown h2 {
+  color: #ccd6f6;
+}
+
+.head p {
+  font-family: "Lato";
+  font-size: 20px;
+  text-align: center;
+  color: #ccd6f6;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header div p {
+  color: #ccd6f6;
+  border: 4px solid #3fd3b0;
+  padding: 15px 20px;
+  font-family: "Lato";
+  letter-spacing: 3px;
+  font-size: 36px;
+  text-align: center;
+}
+
+.content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.aboutMeList {
+  padding-top: 50px;
+  display: flex;
+}
+.aboutMeListItem {
+  background: linear-gradient(#1b4640, rgb(2, 42, 48));
+  border: none;
+  box-shadow: 20px -15px 10px -6px rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding: 10px;
+  width: 322px;
+  height: 400px;
+  cursor: pointer;
+  position: relative;
+}
+.aboutMeListItem:nth-child(1) {
+  margin-right: 60px;
+  margin-bottom: 60px;
+}
+.aboutMeList h3 {
+  padding-bottom: 100px;
+  font-size: 25px;
+}
+.aboutMeList p {
+  padding-top: 60px;
+}
+.aboutMe .mePhoto p {
+  color: #ccd6f6;
+}
+.aboutMe .flipper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  margin-left: 90px;
+}
+
+.flipFront {
+  padding-top: 40px;
+}
+
+.flipFront img {
+  width: 125px;
+}
+
+.flipBack {
+  position: absolute;
+  max-width: 320px;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  color: #ccd6f6;
+}
+
+.flipBack p {
+  font-family: cursive;
+}
+
+.head {
+  -webkit-animation: fadeInDown 4s;
+          animation: fadeInDown 4s;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -100px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -100px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+.headArrowDown {
+  -webkit-animation: fadeInUp 4s;
+          animation: fadeInUp 4s;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 100px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 100px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+.header {
+  -webkit-animation: fadeIn 6s;
+          animation: fadeIn 6s;
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 5s;
+          animation: fadeIn 5s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.fadeInLeft {
+  -webkit-animation: fadeInLeft 5s;
+          animation: fadeInLeft 5s;
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(400px, 0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(400px, 0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+.fadeInRight {
+  -webkit-animation: fadeInRight 5s;
+          animation: fadeInRight 5s;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate(-400px, 0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate(-400px, 0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+.aboutMeListItem:hover img {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.flipper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flipFront,
+.flipBack {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: transform 0.6s linear;
+}
+
+.flipFront {
+  transform: perspective(500px) rotateY(0deg);
+}
+
+.flipBack {
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.aboutMeListItem:hover > .flipFront {
+  transform: rotateY(-180deg);
+}
+
+.aboutMeListItem:hover > .flipBack {
+  transform: rotateY(0deg);
+}
+
+.aboutMeProjectsList img,
+.aboutMeHardSkillsList img {
+  transition: 1s;
+}
+
+.aboutMeProjectsList img:hover,
+.aboutMeHardSkillsList img:hover {
+  transform: scale(1.2);
+}
+
+.aboutMe h2 {
+  font-size: 30px;
+}
+
+.aboutMeHardSkills {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.aboutMeHardSkillsList {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.aboutMeHardSkillsList img {
+  width: 100px;
+  height: 150px;
+}
+.aboutMeHardSkillsList h3 {
+  padding-bottom: 25px;
+}
+
+.aboutMeProjects {
+  margin-top: 50px;
+}
+.aboutMeProjectsList {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.aboutMeProjectsList img {
+  padding: 10px;
+}
+
+.contacts {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.contactsList {
+  display: flex;
+  justify-content: space-around;
+}
+.contactsListLeft {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+.contactsListLeft div {
+  width: 250px;
+}
+.contactsListLeft img {
+  width: 100px;
+}
+.contactsListRight {
+  display: flex;
+  text-align: center;
+}
+
+.contactsListLeftItem h3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contactsListLeftItem a {
+  text-decoration: none;
+  color: #838897;
+  font-size: 17px;
+}
+
+.contactsHead {
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.contactsHeadText {
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+form {
+  border: 1px solid;
+  border-radius: 20px;
+  width: 300px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: linear-gradient(#1b4640, rgb(2, 42, 48));
+  box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, 0.5);
+  border: none;
+}
+
+form h2 {
+  padding-bottom: 20px;
+}
+
+form input {
+  max-width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background: #ccd6f6;
+  padding-left: 20px;
+  border: none;
+}
+
+form input:nth-child(5) {
+  padding: 0;
+  cursor: pointer;
+  background: #64ffda;
+}
+
+form textarea {
+  border-radius: 20px;
+  background: #ccd6f6;
+  resize: none;
+  padding-top: 5px;
+  padding-left: 20px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+footer {
+  background: black;
+  color: white;
+  height: 100px;
+}
+
+footer p {
+  padding-top: 40px;
+}
+
+@media (max-width: 896px) {
+  .head p {
+    font-size: 15px;
+  }
+  .header div p {
+    font-size: 23px;
+  }
+  .headArrowDown h2 {
+    font-size: 16px;
+  }
+  .flipper {
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutMeListItem:nth-child(2) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .aboutMe h2 {
+    font-size: 25px;
+  }
+  .aboutMeHardSkillsList {
+    flex-direction: column;
+  }
+  .aboutMeProjectsList {
+    flex-direction: column;
+  }
+  .contactsList {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactsHead {
+    font-size: 27px;
+    padding-bottom: 29px;
+  }
+  .contactsHeadText {
+    padding-bottom: 15px;
+    font-size: 14px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  .contactsListLeft {
+    gap: 30px;
+    padding-bottom: 80px;
+  }
+  .contactsListLeft div {
+    width: 180px;
+    height: 140px;
+  }
+  .contactsListLeftItem a {
+    font-size: 13px;
+  }
+  form {
+    margin: 0 auto;
+    width: 250px;
+  }
+}
+footer p {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

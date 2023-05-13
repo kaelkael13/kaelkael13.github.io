@@ -1,0 +1,28 @@
+// Анимириованые карточки
+
+.aboutMeListItem img {
+	animation: shake 2.5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+	0% {
+		transform: translate(0px, 0px) rotateY(0deg);
+	}
+
+	25% {
+		transform: rotateY(0deg);
+	}
+
+	50% {
+		transform: rotateY(35deg);
+	}
+
+	75% {
+		transform: rotateY(0deg);
+	}
+
+	100% {
+		transform: rotateY(0deg);
+	}
+}
