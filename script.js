@@ -1,22 +1,3 @@
-let a = prompt('Введите первое число');
-
-let b = prompt('Введите второе число');
-
-a = +a
-
-let question = prompt('Какое действие вы хотите выполнить?');
-
-if (question == '*') {
-	alert(a * b)
-} else if (question == '+') {
-	alert(a + b)
-} else if (question == '-') {
-	alert(a - b)
-} else if (question == '/') {
-	alert(a / b)
-}
-
-
 (function aaaa() {
 	var square = document.getElementById('1')
 
