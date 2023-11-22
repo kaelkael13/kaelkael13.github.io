@@ -142,10 +142,6 @@ h3 {
   color: #ccd6f6;
 }
 
-.flipBack p {
-  font-family: cursive;
-}
-
 .skills span {
   color: orange;
 }
@@ -302,7 +298,6 @@ h3 {
   align-items: center;
   justify-content: center;
   color: whitesmoke;
-  font-family: cursive;
   color: orange;
   text-align: center;
   font-size: 17px;
@@ -443,6 +438,15 @@ footer p {
 @media (max-width: 896px) {
   .head p {
     font-size: 15px;
+  }
+  .aboutMeHardSkillsOtherList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 33px 56px;
+    gap: 30px;
+    grid-column-gap: 30px;
+    max-width: 600px;
+    margin: 0 auto;
   }
   .header div p {
     font-size: 23px;
