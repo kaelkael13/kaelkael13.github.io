@@ -91,7 +91,6 @@ h3 {
   flex-direction: column;
 }
 .aboutMeListItem {
-  margin: 30px;
   background: linear-gradient(#1b4640, rgb(2, 42, 48));
   border: none;
   box-shadow: 20px -15px 10px -6px rgba(0, 0, 0, 0.5);
@@ -101,6 +100,7 @@ h3 {
   height: 400px;
   cursor: pointer;
   position: relative;
+  margin: 10px;
 }
 .aboutMeList h3 {
   padding-bottom: 100px;
@@ -119,9 +119,10 @@ h3 {
 .aboutMe .mePhoto p {
   color: #ccd6f6;
 }
-.aboutMe .flipper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+.flipper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .flipFront {
@@ -238,12 +239,6 @@ h3 {
   animation: none;
 }
 
-.flipper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 .flipFront,
 .flipBack {
   backface-visibility: hidden;
@@ -322,7 +317,7 @@ h3 {
 }
 .aboutMeHardSkillsOtherList {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 33px 56px;
   gap: 30px;
   grid-column-gap: 65px;
@@ -456,8 +451,8 @@ footer p {
     font-size: 16px;
   }
   .flipper {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
   .aboutMeListItem:nth-child(2) {
     margin-left: 0;

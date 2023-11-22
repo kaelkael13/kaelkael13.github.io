@@ -98,7 +98,6 @@ h3 {
 		flex-direction: column;
 
     &Item {
-			margin: 30px;
       background: linear-gradient(#1b4640, rgb(2 42 48));
       border: none;
       box-shadow: 20px -15px 10px -6px rgb(0 0 0 / 50%);
@@ -108,6 +107,7 @@ h3 {
       height: 400px;
       cursor: pointer;
       position: relative;
+			margin: 10px;
     }
 
     // &Item:nth-child(1) {
@@ -138,11 +138,13 @@ h3 {
     color: #ccd6f6;
   }
 
-  .flipper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
+  
 
+}
+
+.flipper {
+	display: flex;
+	justify-content: space-between;
 }
 
 .flipFront {
@@ -279,11 +281,11 @@ h3 {
 
 // Флип карточки
 // **
-.flipper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
+// .flipper {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+// }
 
 .flipFront,
 .flipBack {
@@ -377,7 +379,7 @@ h3 {
 
 	&OtherList {
 		display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 33px 56px;
     gap: 30px;
     grid-column-gap: 65px;
@@ -526,10 +528,10 @@ footer p {
     font-size: 16px;
   }
 
-  .flipper {
-    display: flex;
-    flex-direction: column;
-  }
+	.flipper {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
 
   .aboutMeListItem:nth-child(2) {
     margin-left: 0;
