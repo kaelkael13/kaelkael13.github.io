@@ -88,8 +88,10 @@ h3 {
 .aboutMeList {
   padding-top: 50px;
   display: flex;
+  flex-direction: column;
 }
 .aboutMeListItem {
+  margin: 30px;
   background: linear-gradient(#1b4640, rgb(2, 42, 48));
   border: none;
   box-shadow: 20px -15px 10px -6px rgba(0, 0, 0, 0.5);
@@ -100,10 +102,6 @@ h3 {
   cursor: pointer;
   position: relative;
 }
-.aboutMeListItem:nth-child(1) {
-  margin-right: 60px;
-  margin-bottom: 60px;
-}
 .aboutMeList h3 {
   padding-bottom: 100px;
   font-size: 25px;
@@ -111,14 +109,19 @@ h3 {
 .aboutMeList p {
   padding-top: 60px;
 }
+.aboutMe .mePhoto {
+  padding-bottom: 60px;
+}
+.aboutMe .mePhoto img {
+  max-width: 270px;
+  border-radius: 200px;
+}
 .aboutMe .mePhoto p {
   color: #ccd6f6;
 }
 .aboutMe .flipper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: space-around;
-  margin-left: 90px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .flipFront {
@@ -142,20 +145,25 @@ h3 {
   font-family: cursive;
 }
 
-.head {
-  -webkit-animation: fadeInDown 4s;
-          animation: fadeInDown 4s;
+.skills span {
+  color: orange;
 }
 
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translate(0px, -100px);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
+.edu p {
+  font-size: 14px;
+  border: 4px solid #3fd3b0;
+  padding: 15px;
+  margin-top: 30px;
+}
+.edu span:nth-child(odd) {
+  color: orange;
+}
+.edu span:nth-child(even) {
+  color: aqua;
+}
+
+.head {
+  animation: fadeInDown 4s;
 }
 
 @keyframes fadeInDown {
@@ -169,19 +177,7 @@ h3 {
   }
 }
 .headArrowDown {
-  -webkit-animation: fadeInUp 4s;
-          animation: fadeInUp 4s;
-}
-
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate(0px, 100px);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
+  animation: fadeInUp 4s;
 }
 
 @keyframes fadeInUp {
@@ -195,22 +191,11 @@ h3 {
   }
 }
 .header {
-  -webkit-animation: fadeIn 6s;
-          animation: fadeIn 6s;
+  animation: fadeIn 6s;
 }
 
 .fadeIn {
-  -webkit-animation: fadeIn 5s;
-          animation: fadeIn 5s;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
+  animation: fadeIn 5s;
 }
 
 @keyframes fadeIn {
@@ -222,19 +207,7 @@ h3 {
   }
 }
 .fadeInLeft {
-  -webkit-animation: fadeInLeft 5s;
-          animation: fadeInLeft 5s;
-}
-
-@-webkit-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translate(400px, 0px);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
+  animation: fadeInLeft 5s;
 }
 
 @keyframes fadeInLeft {
@@ -248,19 +221,7 @@ h3 {
   }
 }
 .fadeInRight {
-  -webkit-animation: fadeInRight 5s;
-          animation: fadeInRight 5s;
-}
-
-@-webkit-keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate(-400px, 0px);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
+  animation: fadeInRight 5s;
 }
 
 @keyframes fadeInRight {
@@ -274,8 +235,7 @@ h3 {
   }
 }
 .aboutMeListItem:hover img {
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
 }
 
 .flipper {
@@ -286,8 +246,7 @@ h3 {
 
 .flipFront,
 .flipBack {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: transform 0.6s linear;
 }
 
@@ -330,7 +289,7 @@ h3 {
   padding-top: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 .aboutMeHardSkillsList img {
@@ -339,6 +298,36 @@ h3 {
 }
 .aboutMeHardSkillsList h3 {
   padding-bottom: 25px;
+}
+.aboutMeHardSkillsOther {
+  margin-top: 50px;
+}
+.aboutMeHardSkillsOther p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-family: cursive;
+  color: orange;
+  text-align: center;
+  font-size: 17px;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 20px;
+}
+.aboutMeHardSkillsOther h2 {
+  font-size: 28px;
+  color: grey;
+  padding-bottom: 20px;
+}
+.aboutMeHardSkillsOtherList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 33px 56px;
+  gap: 30px;
+  grid-column-gap: 65px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .aboutMeProjects {
@@ -357,6 +346,7 @@ h3 {
 .contacts {
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-bottom: 100px;
 }
 .contactsList {
   display: flex;

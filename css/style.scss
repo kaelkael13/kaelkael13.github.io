@@ -1,4 +1,4 @@
-$mainColor: rgb(255, 179, 0);
+// $mainColor: rgb(255, 179, 0);
 
 body {
   background: radial-gradient(#0a192f, #1b4640);
@@ -95,8 +95,10 @@ h3 {
   &List {
     padding-top: 50px;
     display: flex;
+		flex-direction: column;
 
     &Item {
+			margin: 30px;
       background: linear-gradient(#1b4640, rgb(2 42 48));
       border: none;
       box-shadow: 20px -15px 10px -6px rgb(0 0 0 / 50%);
@@ -108,10 +110,10 @@ h3 {
       position: relative;
     }
 
-    &Item:nth-child(1) {
-      margin-right: 60px;
-      margin-bottom: 60px;
-    }
+    // &Item:nth-child(1) {
+    //   margin-right: 60px;
+    //   margin-bottom: 60px;
+    // }
   }
 
   &List h3 {
@@ -123,15 +125,22 @@ h3 {
     padding-top: 60px;
   }
 
+	.mePhoto {
+		padding-bottom: 60px;
+		
+		& img {
+			max-width: 270px;	
+			border-radius: 200px;
+		}
+	}
+
   .mePhoto p {
     color: #ccd6f6;
   }
 
   .flipper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-around;
-    margin-left: 90px;
+    grid-template-columns: repeat(3, 1fr);
   }
 
 }
@@ -157,7 +166,27 @@ h3 {
   font-family: cursive;
 }
 
+.skills span {
+	color: orange;
+}
 
+.edu {
+
+	& p {
+		font-size: 14px;
+		border: 4px solid #3fd3b0;
+		padding: 15px;
+		margin-top: 30px;
+	}
+
+	& span:nth-child(odd) {
+		color: orange;
+	}
+
+	& span:nth-child(even) {
+		color: aqua;
+	}
+}
 
 .head {
   animation: fadeInDown 4s;
@@ -307,7 +336,7 @@ h3 {
     padding-top: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
   }
 
@@ -319,6 +348,42 @@ h3 {
   &List h3 {
     padding-bottom: 25px;
   }
+
+	&Other {
+		margin-top: 50px;
+	}
+
+	&Other p {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: whitesmoke;
+		font-family: cursive;
+		color: orange;
+		text-align: center;
+		font-size: 17px;
+		border: 1px solid black;
+		border-radius: 30px;
+		padding: 20px;
+	}
+
+	&Other h2{
+		font-size: 28px;
+		color: grey;
+		padding-bottom: 20px;
+	}
+
+	
+
+	&OtherList {
+		display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 33px 56px;
+    gap: 30px;
+    grid-column-gap: 65px;
+    max-width: 600px;
+    margin: 0 auto;
+	}
 }
 
 .aboutMeProjects {
@@ -340,6 +405,7 @@ h3 {
   // background-image: url(images/headBcgr.jpg);
   padding-top: 50px;
   padding-bottom: 50px;
+	margin-bottom: 100px;
 
   &List {
     display: flex;
